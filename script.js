@@ -8,6 +8,16 @@ function convertToRoman(num) {
       5:['V', 5], 
       6:['I', 1]
     };
+	let str = '';
+
+    for (let i = 0; i < 7; i++) {
+        while (num >= obj[i][1]) {
+            str += obj[i][0];
+            num -= obj[i][1];
+        }
+    }
+
+    return str;
 
   //your code here
 
